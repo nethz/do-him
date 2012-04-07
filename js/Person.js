@@ -216,6 +216,12 @@ PersonShare.prototype={
 	baseX : 0,
 	baseY : 0,
 
+	imgWidth : 48 ,
+	imgHeight : 80 ,
+
+	weaponImgWidth : 56 ,
+	weaponImgHeight : 24 ,
+	
 	x : 0,
 	y : 0,
 	rotation : 0,

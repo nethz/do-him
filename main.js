@@ -123,6 +123,7 @@ var game=scope.game=new DH.Game({
 				$css($$('.cur-score'), 'display', 'block');
 				$css($$('.hi-score'), 'display', 'block');
 
+				this.personList=[];
 				this.createMap();
 				this.createPlayer();
 			},
@@ -153,8 +154,17 @@ var game=scope.game=new DH.Game({
 
 				this.player.init();
 
-					
+				this.personShare=new PersonShare({
+					img : this.player.img,
+					baseX : this.player.baseX,
+					baseY : this.player.baseY,
+					imgWidth : this.player.imgWidth ,
+					imgHeight : this.player.imgHeight ,
+					weaponImgWidth : this.player.weaponImgWidth ,
+					weaponImgHeight : this.player.weaponImgHeight ,
+				});
 			},
+
 			createEntity : function( type , z ) {
 
 			},
@@ -166,23 +176,35 @@ var game=scope.game=new DH.Game({
 				this.map.update(deltaTime);
 			},
 
+			drawBG : function(context){
+
+				// context.fillStyle="red";
+				// context.fillRect(0,0,this.game.width,this.game.height);
+				
+				this.map.render( context );
+
+				for (var i=this.personList.length-1;i>=0;i--){
+					var p=this.personList[i];
+					var id=p[0];
+					var x=p[1];
+					var y=p[2];
+				}
+
+			},
+
 			render : function(deltaTime){
 				
 				var context=this.game.context;
 				
 				context.clearRect(0,0,this.game.width,this.game.height);
 
-				// this.map.render( context );
-				
+
 				context.save();
 
 				this.player.view.drawPath(context);
 				context.clip();
 				
-				// context.fillStyle="red";
-				// context.fillRect(0,0,this.game.width,this.game.height);
-				
-				this.map.render( context );
+				this.drawBG(context);				
 
 				context.restore();
 
