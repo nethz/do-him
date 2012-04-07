@@ -1,0 +1,100 @@
+﻿
+
+body{margin:0;padding:0;font-size:12px;background-color:#000;}
+
+body, div {
+	-webkit-user-select: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-touch-callout: none;	
+	-webkit-text-size-adjust: none;
+}
+
+body, div ,canvas {
+    image-rendering: optimizeSpeed;
+    -webkit-image-rendering: optimizeSpeed;
+    -webkit-interpolation-mode: nearest-neighbor;
+}
+
+body, html{height: 100%; width:100%;}
+
+
+#Stage {
+	position: relative;
+	width: 800px;
+	height: 600px;
+	padding: 0px;
+	margin:0 auto;
+	
+	color: #000000;
+	font-family: Monospace;
+	font-size: 13px;
+	text-align: left;
+
+		/*position: fixed;*/
+	background: #333;
+}
+
+
+#Stage .time, #Stage .cur-score,#Stage .hi-score {
+	font-size: 20px;
+	font-weight: bold;
+	text-shadow: 0px 0px 25px rgba(255,255,255,0.7);
+	position: absolute;
+	color: rgba(255,255,255,0.7);
+	background-color : rgba(0,0,0,0.3);
+	padding : 4px;
+	border-radius : 8px;
+	z-index : 999999 ;
+}
+#Stage .time {
+	display : none;
+	min-width : 100px;	
+	left: 10px;
+	top: 10px;
+}
+#Stage .cur-score,#Stage .hi-score {
+	display : none;
+	min-width : 100px;
+	right: 10px;
+	top: 10px;
+}
+#Stage .hi-score {
+	display : none;
+	top: 50px;
+}
+
+
+#info {
+	position: absolute ;
+	background-color : rgba(220,220,220,0.6);
+	padding : 2px;
+	color : while;
+	border : 1px solid while;
+	top :2px;
+	left : 2px;
+	z-index : 99;
+}
+
+.joystick {
+	position: absolute;
+	top : 80px;
+	left : 120px;
+}
+
+.slot {
+position: absolute;
+background-color : #ffffff;
+border : 1px solid #333333;
+opacity: 0.3;
+}
+
+.stick {
+position: absolute;
+background-color : #ccccff;
+}
+
+#stick2 {
+	background-color : #ffffff;
+	border : 1px solid #333333;
+	opacity: 0.3;
+}

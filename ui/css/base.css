@@ -1,0 +1,158 @@
+/**
+ *     reset style
+ */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/**
+ *     base style
+ */
+html, body {
+	width: 100%;
+	min-width: 800px;
+	height: 100%;
+	min-height: 600px;
+	background: #000;
+	overflow: hidden;
+}
+a, a:hover {
+	text-decoration: none;
+}
+.btn {
+	display: block;
+	font-size: 23px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 30px;
+	height: 30px;
+	color: rgba(255,255,255,0.7);
+	border: 1px solid #FFF;
+	border-color: rgba(255,255,255,0.4);
+	border-radius: 10px;
+	background-color: rgba(0,0,0,0.5);
+}
+.btn {
+	display: block;
+	font-size: 23px;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 0px 0px 25px rgba(255,255,255,0.7);
+	line-height: 40px;
+	height: 40px;
+	color: rgba(255,255,255,0.7);
+	border: 1px solid #FFF;
+	border-color: rgba(255,255,255,0.2);
+	border-radius: 10px;
+	background-color: rgba(255,255,255,0.1);
+	-webkit-transition: border-color .3s ease-in, background-color .3s ease-in;
+}
+.btn:hover {
+	border-color: rgba(255,255,255,0.4);
+	background-color: rgba(255,255,255,0.2);
+}
+.dialog {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: rgba(0,0,0,0.2);
+}
+.dialog .popup {
+	position: fixed;
+	border: 1px solid #FFF;
+	border-color: rgba(255,255,255,0.4);
+	border-radius: 25px;
+	box-shadow: 0px 0px 50px 5px rgba(255,255,255,0.5);
+	background-color: rgba(0,0,0,0.3);
+}
+.dialog .popup .btn {
+	margin: 20px;
+}
+.dialog .popup .title {
+	margin: 20px;
+	display: block;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 0px 0px 25px rgba(255,255,255,0.7);
+	line-height: 30px;
+	height: 30px;
+	color: rgba(255,255,255,0.7);
+}
+
+#Stage .time, #Stage .cur-score,#Stage .hi-score {
+	font-size: 22px;
+	font-weight: bold;
+	text-shadow: 0px 0px 25px rgba(255,255,255,0.7);
+	position: absolute;
+	color: rgba(255,255,255,0.7);
+	background-color : rgba(0,0,0,0.3);
+	padding : 4px;
+	border-radius : 8px;
+	z-index : 999999 ;
+}
+#Stage .time {
+	display : none;
+	min-width : 100px;	
+	left: 10px;
+	top: 10px;
+}
+#Stage .cur-score,#Stage .hi-score {
+	display : none;
+	min-width : 100px;
+	right: 10px;
+	top: 10px;
+}
+#Stage .hi-score {
+	display : none;
+	top: 50px;
+}
+
+#GameOver .ys, #GameOver .ysnum {
+	margin: 20px;
+	display: block;
+	font-size: 16px;
+	text-align: center;
+	line-height: 20px;
+	height: 20px;
+	color: rgba(255,255,255,0.7);
+}
+#GameOver .ysnum {
+	font-size: 28px;
+	font-weight: bold;
+	text-shadow: 0px 0px 25px rgba(255,255,255,0.7);
+	line-height: 30px;
+	height: 30px;
+}
+#Loading .loading-bg {
+	margin: 20px;
+	height: 30px;
+	background-color: rgba(0,0,0,0.2);
+}
+#Loading .loading {
+	width: 50%;
+	height: 30px;
+	box-shadow: 0px 0px 25px 5px rgba(255,255,255,0.5);
+	background-color: rgba(255,255,255,0.5);
+}
