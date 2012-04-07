@@ -193,5 +193,5 @@ Person.prototype={
 	}
 
 }
-exports.Class = Player;//1501616931
+exports.Person = Person;//1501616931
 

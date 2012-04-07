@@ -28,13 +28,13 @@ function filter_interval(interval)
 	}
 	return all/filter.length;		
 }
-game.post_message = function(id, msg)
+game.receive_message = function(id, msg)
 {
     var evt = {}
     evt.id = id;
     evt.msg = msg;
     
-    util.log("game: post message! id:"+ id + "; msg = " + msg + ";");
+    util.log("game: receive message! id:"+ id + "; msg = " + msg + ";");
     game.event_list.push(evt);
 }
 //game.render = function()
@@ -68,7 +68,7 @@ game.update = function(step)
     {
         // 分发消息
         var evt = game.event_list[i];
-        player_manager.post_event(step, evt);
+        player_manager.receive_event(step, evt);
     }
    
     // 更新场景

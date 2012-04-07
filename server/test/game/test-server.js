@@ -23,7 +23,7 @@ server.on("connection", function(conn){
   conn.on("message", function(message){
     var msg = {};
     msg.text = message;
-    game.post_message(conn.id, msg);
+    game.receive_message(conn.id, msg);
     //向所有客户端发送信息.
     util.log(conn.id+" recive & send : "+message + "; time:" + game.time);
     server.broadcast(message + "; time:" + game.time);
@@ -34,7 +34,7 @@ server.on("connection", function(conn){
 //当有客户端断开连接时
 server.on("close", function(conn){
     util.log("Disconnected: "+conn.id);
-    game.root.remove_player(conn.id);
+    game.remove_player(conn.id);
     //向所有客户端发送信息.
     server.broadcast(conn.id+" has disconnected.");
     

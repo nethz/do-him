@@ -18,11 +18,11 @@ player_manager.remove_player = function(id)
     delete player_manager.list[id];
 }
 
-player_manager.post_event = function(step, evt)
+player_manager.receive_event = function(step, evt)
 {
 
     util.log("player_manager: post_event!");
-    player_manager.list[evt.id].post_message(step, evt.msg);
+    player_manager.list[evt.id].receive_message(step, evt.msg);
 }
 
 
